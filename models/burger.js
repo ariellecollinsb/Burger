@@ -17,6 +17,11 @@ var burger = {
             cb(res);
         });
     },
+    delete: function (cols, vals, cb) {
+        orm.delete("burgers", cols, vals, function (res) {
+            cb(res);
+        });
+    },
 };
 
 module.exports = burger;
